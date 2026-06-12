@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flores a domicilio en Cúcuta. Envío de rosas a domicilio, ramos de flores, orquídeas y arreglos florales. Floristería con envío express. Enviar flores a domicilio nunca fue tan fácil.">
+    <meta name="keywords" content="rosas a domicilio, ramos de flores a domicilio, orquideas a domicilio, floristería a domicilio, flores a domicilio, envio flores, envio de flores a domicilio, envio de flores, enviar flores a domicilio, arreglos florales a domicilio">
+    <title>Flores a Domicilio en Cúcuta | Envío de Rosas y Ramos de Flores | Entrega Express</title>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google Ads Conversion Tracking - Global Site Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17881122637"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17881122637');
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/logo.webp">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #9966CC;
+            --secondary: #7A4FA8;
+            --accent: #B57EDC;
+            --dark: #1a1a1a;
+            --light: #ffffff;
+            --gray: #666;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===================================
+           HERO SECTION
+           =================================== */
+        .hero {
+            background: linear-gradient(135deg, #9966CC 0%, #7A4FA8 50%, #B57EDC 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '🚚';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.1;
+            top: -50px;
+            right: -50px;
+            animation: delivery 4s ease-in-out infinite;
+        }
+
+        @keyframes delivery {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(30px); }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .delivery-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            margin-bottom: 2rem;
+            animation: pulse-badge 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-badge {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0); }
+        }
+
+        .hero-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .keyword-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-hero {
+            display: inline-block;
+            padding: 1.25rem 3rem;
+            background: white;
+            color: var(--primary);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-hero:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ===================================
+           URGENCY BANNER
+           =================================== */
+        .urgency-banner {
+            background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
+            color: var(--dark);
+            text-align: center;
+            padding: 1rem;
+            font-weight: 600;
+            font-size: 1.125rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .urgency-banner span {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* ===================================
+           DELIVERY PROCESS SECTION
+           =================================== */
+        .delivery-process {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .process-step::before {
+            content: attr(data-step);
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 12px rgba(153, 102, 204, 0.3);
+        }
+
+        .process-step:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(153, 102, 204, 0.2);
+        }
+
+        .process-icon {
+            font-size: 4rem;
+            margin: 1rem 0;
+        }
+
+        .process-step h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary);
+        }
+
+        .process-step p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* ===================================
+           FEATURES SECTION
+           =================================== */
+        .features {
+            padding: 60px 20px;
+            background: #fafafa;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(153, 102, 204, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary);
+        }
+
+        .feature-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* ===================================
+           PRODUCTS SECTION
+           =================================== */
+        .products-section {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            font-size: 1.125rem;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(153, 102, 204, 0.2);
+        }
+
+        .product-image-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .delivery-badge-product {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .product-description {
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .product-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .price-label {
+            font-size: 0.75rem;
+            color: var(--gray);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .btn-order {
+            padding: 0.875rem 2rem;
+            background: linear-gradient(135deg, var(--accent) 0%, #8E5BBF 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(181, 126, 220, 0.3);
+        }
+
+        .btn-order:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(181, 126, 220, 0.4);
+            background: linear-gradient(135deg, #8E5BBF 0%, #558B2F 100%);
+        }
+
+        .btn-order svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* ===================================
+           TESTIMONIALS SECTION
+           =================================== */
+        .testimonials {
+            background: #fafafa;
+            padding: 60px 20px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--primary);
+            opacity: 0.2;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .testimonial-stars {
+            color: #FFD700;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .testimonial-service {
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        /* ===================================
+           GUARANTEE SECTION
+           =================================== */
+        .guarantee-section {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .guarantee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .guarantee-item {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border: 2px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .guarantee-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(181, 126, 220, 0.2);
+        }
+
+        .guarantee-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .guarantee-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary);
+        }
+
+        .guarantee-item p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* ===================================
+           FLOATING WHATSAPP BUTTON
+           =================================== */
+        .whatsapp-float {
+            position: fixed;
+            width: 70px;
+            height: 70px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 40px;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-float svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+
+        .whatsapp-pulse {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #25d366;
+            opacity: 0.6;
+            animation: pulse-ring 2s ease-out infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* ===================================
+           TRUST SECTION
+           =================================== */
+        .trust-section {
+            background: #fafafa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .trust-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .trust-badge-icon {
+            font-size: 3rem;
+        }
+
+        .trust-badge-text {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* ===================================
+           RESPONSIVE
+           =================================== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.25rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero::before {
+                font-size: 8rem;
+            }
+
+            .keyword-badge {
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .product-footer {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: stretch;
+            }
+
+            .btn-order {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .whatsapp-float {
+                width: 60px;
+                height: 60px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-float svg {
+                width: 35px;
+                height: 35px;
+            }
+
+            .urgency-banner {
+                font-size: 1rem;
+                padding: 0.75rem;
+            }
+
+            .process-grid,
+            .features-grid,
+            .guarantee-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Urgency Banner -->
+    <div class="urgency-banner">
+        🚚 <span>¡ENVÍO GRATIS!</span> En pedidos de flores a domicilio hoy mismo 🚚
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="delivery-badge">
+                🚚 Envío Express - Flores a Domicilio
+            </div>
+            
+            <h1>🌹 Flores a Domicilio en Cúcuta 🌹</h1>
+            <p class="subtitle">Rosas a Domicilio, Ramos de Flores y Arreglos Florales con Envío Express</p>
+            <p>¿Quieres enviar flores a domicilio? Aquí está tu floristería a domicilio de siempre. Envío de flores express con rosas a domicilio, ramos de flores a domicilio, orquídeas a domicilio y arreglos florales a domicilio. El servicio de envío flores número uno en Cúcuta. Enviar flores a domicilio jamás había sido tan sencillo.</p>
+            
+            <div class="hero-keywords">
+                <span class="keyword-badge">🌹 Rosas a Domicilio</span>
+                <span class="keyword-badge">💐 Ramos de Flores a Domicilio</span>
+                <span class="keyword-badge">🌺 Orquídeas a Domicilio</span>
+                <span class="keyword-badge">🏪 Floristería a Domicilio</span>
+                <span class="keyword-badge">🚚 Envío de Flores</span>
+                <span class="keyword-badge">📦 Envío Express</span>
+                <span class="keyword-badge">🎁 Arreglos Florales a Domicilio</span>
+            </div>
+            
+            <a href="https://wa.me/573125961045?text=Hola,%20quiero%20enviar%20flores%20a%20domicilio" class="cta-hero" onclick="trackConversion()">
+                Enviar Flores Ahora 🚚
+            </a>
+        </div>
+    </section>
+
+    <!-- Delivery Process Section -->
+    <section class="delivery-process">
+        <div class="container">
+            <h2 class="section-title">¿Cómo Funciona Nuestro Envío de Flores a Domicilio?</h2>
+            <p class="section-subtitle">Enviar flores a domicilio resulta sencillo, ágil y confiable. Somos la floristería a domicilio que te asegura frescura y entregas a tiempo.</p>
+            
+            <div class="process-grid">
+                <div class="process-step" data-step="1">
+                    <div class="process-icon">📱</div>
+                    <h3>Elige tus Flores</h3>
+                    <p>Escoge entre rosas a domicilio, ramos de flores a domicilio, orquídeas a domicilio o arreglos florales a domicilio</p>
+                </div>
+                
+                <div class="process-step" data-step="2">
+                    <div class="process-icon">💳</div>
+                    <h3>Realiza tu Pedido</h3>
+                    <p>Valida tu envío de flores indicando la dirección de entrega y la forma de pago. Envío flores con total seguridad y confianza</p>
+                </div>
+                
+                <div class="process-step" data-step="3">
+                    <div class="process-icon">🌹</div>
+                    <h3>Preparamos tu Arreglo</h3>
+                    <p>En nuestra floristería a domicilio elaboramos tu arreglo con flores frescas del día, con todo el esmero y cariño</p>
+                </div>
+                
+                <div class="process-step" data-step="4">
+                    <div class="process-icon">🚚</div>
+                    <h3>Entrega Express</h3>
+                    <p>Enviar flores a domicilio jamás fue tan veloz. Llegamos en tiempo récord a cualquier punto de Cúcuta</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">¿Por Qué Elegir Nuestro Servicio de Flores a Domicilio?</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Envío Rápido</h3>
+                    <p>Envío de flores a domicilio en modalidad express. Rosas a domicilio y ramos de flores que llegan el mismo día</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌹</div>
+                    <h3>Flores Frescas</h3>
+                    <p>La floristería a domicilio con la mayor frescura. En cada envío flores recibes productos cortados el mismo día</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💯</div>
+                    <h3>Garantía Total</h3>
+                    <p>Respaldamos la calidad de cada envío de flores. Arreglos florales a domicilio impecables o te reembolsamos tu dinero</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>Embalaje Premium</h3>
+                    <p>Enviar flores a domicilio con un empaque especial que conserva la frescura y la belleza hasta el destino</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Cobertura Total</h3>
+                    <p>Envío de flores a domicilio por toda Cúcuta. Ramos de flores a domicilio en el punto que nos indiques</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Tarjeta Gratis</h3>
+                    <p>Todo envío flores lleva una tarjeta personalizada. Enviar flores a domicilio acompañadas de tu dedicatoria especial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Catálogo de Flores a Domicilio</h2>
+            <p class="section-subtitle">Explora todas las alternativas para enviar flores a domicilio: rosas a domicilio, ramos de flores a domicilio, orquídeas a domicilio y arreglos florales a domicilio. La floristería a domicilio en la que puedes confiar.</p>
+            
+            <div class="products-grid" id="products-grid">
+                <!-- Los productos se generarán aquí con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+            <p class="section-subtitle">Miles de clientes respaldan nuestro servicio de flores a domicilio</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Un servicio de envío de flores a domicilio buenísimo. Las rosas llegaron impecables y puntuales. Sin duda la mejor floristería a domicilio de Cúcuta."</p>
+                    <p class="testimonial-author">María González</p>
+                    <p class="testimonial-service">Rosas a Domicilio</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Enviar flores a domicilio con ellos resultó facilísimo. Los ramos de flores a domicilio son preciosos y el envío flores llegó en muy poco tiempo."</p>
+                    <p class="testimonial-author">Carlos Martínez</p>
+                    <p class="testimonial-service">Ramos de Flores a Domicilio</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Los arreglos florales a domicilio más lindos. El servicio de envío de flores a domicilio fue mucho mejor de lo que esperaba. Lo recomiendo por completo."</p>
+                    <p class="testimonial-author">Ana Rodríguez</p>
+                    <p class="testimonial-service">Arreglos Florales a Domicilio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="container">
+            <h2 class="section-title">Nuestras Garantías en el Envío de Flores</h2>
+            
+            <div class="guarantee-grid">
+                <div class="guarantee-item">
+                    <div class="guarantee-icon">✅</div>
+                    <h3>Frescura Garantizada</h3>
+                    <p>Todo envío flores se prepara con productos frescos del día. Rosas a domicilio y ramos de flores impecables</p>
+                </div>
+                
+                <div class="guarantee-item">
+                    <div class="guarantee-icon">🕐</div>
+                    <h3>Puntualidad</h3>
+                    <p>Envío de flores a domicilio dentro del horario acordado. Tu floristería a domicilio nunca te queda mal</p>
+                </div>
+                
+                <div class="guarantee-item">
+                    <div class="guarantee-icon">💰</div>
+                    <h3>Mejor Precio</h3>
+                    <p>Las tarifas más competitivas en flores a domicilio. Enviar flores a domicilio de calidad sin pagar de más</p>
+                </div>
+                
+                <div class="guarantee-item">
+                    <div class="guarantee-icon">🔒</div>
+                    <h3>Pago Seguro</h3>
+                    <p>Envío de flores con pagos 100% protegidos. Arreglos florales a domicilio con transacciones completamente seguras</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <h2 class="section-title">La Floristería a Domicilio Más Confiable</h2>
+            <p class="section-subtitle">Referente del envío de flores a domicilio en Cúcuta</p>
+            
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">⭐⭐⭐⭐⭐</div>
+                    <div class="trust-badge-text">5 Estrellas en Google</div>
+                </div>
+                
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">🚚</div>
+                    <div class="trust-badge-text">+5000 Envíos Exitosos</div>
+                </div>
+                
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">🌹</div>
+                    <div class="trust-badge-text">Flores 100% Frescas</div>
+                </div>
+                
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">💝</div>
+                    <div class="trust-badge-text">100% Satisfacción</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/573125961045?text=Hola,%20quiero%20enviar%20flores%20a%20domicilio" 
+       class="whatsapp-float" 
+       target="_blank"
+       onclick="trackConversion()">
+        <div class="whatsapp-pulse"></div>
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Función para rastrear conversiones de Google Ads
+        function trackConversion() {
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17881122637/LzB_CM6Cz-YbEM2Osc5C'
+            });
+        }
+
+// Datos de productos completos (todos los 60 productos)
+const products = [
+            {
+                id: 1,
+                name: "Margaritas y Lirios",
+                price: 45000,
+                image: "/assets/foto1.webp",
+                description: "Ramo fresco de lirios amarillos y margaritas blancas con follaje verde en envoltura delicada. Un detalle luminoso y alegre, perfecto para iluminar el día de alguien especial.",
+                categories: ["mix", "precio-bajo"]
+            },
+            {
+                id: 19,
+                name: "Girasoles y Rosas",
+                price: 97500,
+                image: "/assets/foto19.webp",
+                description: "Alegre combinación de girasoles y rosas con envoltura llamativa. El equilibrio perfecto entre fuerza y ternura.",
+                categories: ["girasoles", "precio-bajo"]
+            },
+            {
+                id: 14,
+                name: "Girasoles, Lirios y Chocolates",
+                price: 137500,
+                image: "/assets/foto14.webp",
+                description: "Bouquet de girasoles y lirios amarillos acompañado de deliciosos chocolates. Un regalo completo que combina dulzura y esplendor.",
+                categories: ["girasoles", "chocolates", "precio-medio"]
+            },
+            {
+                id: 5,
+                name: "Margaritas y Lirios Rosa",
+                price: 45000,
+                image: "/assets/foto5.webp",
+                description: "Tierno ramo de lirios rosados y margaritas blancas con envoltura suave. Delicado y romántico, ideal para cualquier ocasión especial.",
+                categories: ["mix", "precio-bajo"]
+            },
+            {
+                id: 28,
+                name: "Ramo Mix",
+                price: 97500,
+                image: "/assets/foto28.webp",
+                description: "Colorida mezcla de flores frescas de temporada con follaje variado. Una composición versátil que encanta a primera vista.",
+                categories: ["mix", "precio-bajo"]
+            },
+            {
+                id: 41,
+                name: "18 Rosas y 3 Girasoles",
+                price: 137500,
+                image: "/assets/foto41.webp",
+                description: "Dieciocho rosas rojas con tres girasoles en envoltura elegante. Una combinación vibrante que enamora al instante.",
+                categories: ["rosas-rojas", "girasoles", "precio-medio"]
+            },
+            {
+                id: 6,
+                name: "4 Girasoles",
+                price: 52500,
+                image: "/assets/foto6.webp",
+                description: "Bouquet de cuatro girasoles frescos con follaje y envoltura rosa. Un detalle sencillo que transmite luz y buenos deseos.",
+                categories: ["girasoles", "precio-bajo"]
+            },
+            {
+                id: 35,
+                name: "12 Rosas y 2 Girasoles",
+                price: 97500,
+                image: "/assets/foto35.webp",
+                description: "Doce rosas rojas con dos girasoles centrales y follaje fresco. Pasión y alegría en perfecta armonía.",
+                categories: ["rosas-rojas", "girasoles", "precio-bajo"]
+            },
+            {
+                id: 32,
+                name: "Ramo Mix Premium",
+                price: 143750,
+                image: "/assets/foto32.webp",
+                description: "Sofisticada mezcla de rosas y flores selectas en envoltura premium. Un regalo de categoría para sorprender con estilo.",
+                categories: ["mix", "rosas-rojas", "precio-medio"]
+            },
+            {
+                id: 26,
+                name: "Margaritas y Astromelias",
+                price: 56250,
+                image: "/assets/foto26.webp",
+                description: "Tierno ramo de margaritas blancas y astromelias en tonos cálidos. Sencillo, fresco y perfecto para alegrar el día.",
+                categories: ["mix", "precio-bajo"]
+            },
+            {
+                id: 24,
+                name: "12 Rosas y Astromelias",
+                price: 100000,
+                image: "/assets/foto24.webp",
+                description: "Docena de rosas acompañadas de astromelias y follaje en envoltura vistosa. Un detalle abundante y lleno de vida.",
+                categories: ["rosas-rojas", "mix", "precio-medio"]
+            },
+            {
+                id: 11,
+                name: "20 Rosas y Lirios",
+                price: 147500,
+                image: "/assets/foto11.webp",
+                description: "Espectacular ramo de 20 rosas con lirios en envoltura azul de lujo. Una combinación abundante que impresiona a primera vista.",
+                categories: ["rosas-rosadas", "mix", "precio-medio"]
+            },
+            {
+                id: 36,
+                name: "Margaritas x2",
+                price: 56250,
+                image: "/assets/foto36.webp",
+                description: "Ramo doble de margaritas en tonos lila y blanco con envoltura suave. Frescura silvestre para un detalle espontáneo.",
+                categories: ["mix", "precio-bajo"]
+            },
+            {
+                id: 38,
+                name: "10 Rosas y 8 Chocolates",
+                price: 102500,
+                image: "/assets/foto38.webp",
+                description: "Diez rosas frescas acompañadas de ocho chocolates en presentación elegante. El dúo perfecto entre romance y dulzura.",
+                categories: ["rosas-rojas", "chocolates", "precio-medio"]
+            },
+            {
+                id: 12,
+                name: "9 Girasoles y 10 Rosas",
+                price: 147500,
+                image: "/assets/foto12.webp",
+                description: "Vistoso arreglo de nueve girasoles y diez rosas con follaje y envoltura clara. Color y alegría en una composición generosa.",
+                categories: ["girasoles", "precio-medio"]
+            },
+            {
+                id: 40,
+                name: "Girasoles y Margaritas",
+                price: 62500,
+                image: "/assets/foto40.webp",
+                description: "Fresco ramo de girasoles con margaritas moradas y blancas. Una mezcla campestre llena de color y buena energía.",
+                categories: ["girasoles", "mix", "precio-bajo"]
+            },
+            {
+                id: 3,
+                name: "8 Girasoles y Pompón",
+                price: 110000,
+                image: "/assets/foto3.webp",
+                description: "Generoso bouquet de ocho girasoles con pompones en envoltura elegante con moño. Pura energía y alegría en un solo ramo.",
+                categories: ["girasoles", "precio-medio"]
+            },
+            {
+                id: 25,
+                name: "14 Girasoles",
+                price: 156250,
+                image: "/assets/foto25.webp",
+                description: "Majestuoso bouquet de 14 girasoles en envoltura oscura de contraste. Energía pura para quien ilumina tus días.",
+                categories: ["girasoles", "precio-medio"]
+            },
+            {
+                id: 8,
+                name: "1 Girasol y 10 Rosas",
+                price: 70000,
+                image: "/assets/foto8.webp",
+                description: "Diez rosas rojas coronadas por un girasol central en envoltura elegante. La mezcla perfecta entre pasión y alegría.",
+                categories: ["girasoles", "rosas-rojas", "precio-bajo"]
+            },
+            {
+                id: 10,
+                name: "Lirios y Claveles",
+                price: 112500,
+                image: "/assets/foto10.webp",
+                description: "Ramo clásico de lirios y claveles blancos con follaje fresco. Elegancia pura que transmite serenidad y cariño.",
+                categories: ["mix", "precio-medio"]
+            },
+            {
+                id: 37,
+                name: "24 Rosas Envoltura Especial",
+                price: 156250,
+                image: "/assets/foto37.webp",
+                description: "Veinticuatro rosas en una envoltura diferente y llamativa que realza cada flor. Para quienes buscan un regalo clásico con presentación única.",
+                categories: ["rosas-rojas", "precio-medio"]
+            },
+            {
+                id: 22,
+                name: "Ramo Azul Celeste",
+                price: 72500,
+                image: "/assets/foto22.webp",
+                description: "Fresco ramo de rosas blancas con margaritas azules y solidago. Una combinación original que evoca cielo y tranquilidad.",
+                categories: ["mix", "precio-bajo"]
+            },
+            {
+                id: 13,
+                name: "Lirios y Claveles Amarillos",
+                price: 112500,
+                image: "/assets/foto13.webp",
+                description: "Ramo radiante de lirios amarillos y claveles con envoltura rosa. Frescura y luz para alegrar cualquier espacio.",
+                categories: ["mix", "precio-medio"]
+            },
+            {
+                id: 4,
+                name: "24 Rosas y Mensaje Secreto",
+                price: 175000,
+                image: "/assets/foto4.webp",
+                description: "Corazón de 24 rosas rojas y blancas con un mensaje secreto oculto en su interior. Una declaración de amor inolvidable para esa persona única.",
+                categories: ["rosas-rojas", "cajas", "precio-medio"]
+            },
+            {
+                id: 2,
+                name: "Rosas, Astromelias y Ferrero x3",
+                price: 75000,
+                image: "/assets/foto2.webp",
+                description: "Ramo de rosas rosadas y astromelias acompañado de tres chocolates Ferrero Rocher. La combinación ideal entre flores y dulzura para sorprender.",
+                categories: ["rosas-rosadas", "chocolates", "precio-bajo"]
+            },
+            {
+                id: 7,
+                name: "18 Rosas Rojas",
+                price: 118750,
+                image: "/assets/foto7.webp",
+                description: "Arreglo de 18 rosas rojas frescas con tarjeta personalizada. Un clásico romántico que nunca pasa de moda.",
+                categories: ["rosas-rojas", "precio-medio"]
+            },
+            {
+                id: 30,
+                name: "Cofre Floral de Cumpleaños",
+                price: 212500,
+                image: "/assets/foto30.webp",
+                description: "Elegante cofre lila de 'Feliz Cumpleaños' con rosas, claveles y mariposas decorativas, con espacio para el regalo que desees incluir. Una manera espectacular de entregar ese obsequio especial.",
+                categories: ["cajas", "rosas-rojas", "precio-alto"]
+            },
+            {
+                id: 43,
+                name: "12 Rosas",
+                price: 75000,
+                image: "/assets/foto43.webp",
+                description: "Docena de rosas rojas en envoltura negra con detalles delicados. El gesto romántico por excelencia.",
+                categories: ["rosas-rojas", "precio-bajo"]
+            },
+            {
+                id: 42,
+                name: "18 Rosas",
+                price: 118750,
+                image: "/assets/foto42.webp",
+                description: "Ramo de 18 rosas rojas con flores blancas de acompañamiento. Romántico, clásico y siempre acertado.",
+                categories: ["rosas-rojas", "precio-medio"]
+            },
+            {
+                id: 9,
+                name: "Caja Mix Especial",
+                price: 237500,
+                image: "/assets/foto9.webp",
+                description: "Elegante caja de madera con rosas rojas, girasoles y espacio para el obsequio que elijas (el artículo adicional lo trae o envía el cliente). Una presentación sofisticada para sorprender en grande.",
+                categories: ["cajas", "girasoles", "rosas-rojas", "precio-alto"]
+            },
+            {
+                id: 34,
+                name: "6 Girasoles",
+                price: 81250,
+                image: "/assets/foto34.webp",
+                description: "Bouquet de seis girasoles radiantes con envoltura clara y moño. Un clásico alegre que nunca falla.",
+                categories: ["girasoles", "precio-bajo"]
+            },
+            {
+                id: 20,
+                name: "Caja Globo Rosa",
+                price: 122500,
+                image: "/assets/foto20.webp",
+                description: "Encantadora caja redonda con flores en tonos rosa y crema, coronada con un globo decorativo. Una sorpresa tierna que eleva cualquier celebración.",
+                categories: ["cajas", "rosas-rosadas", "precio-medio"]
+            },
+            {
+                id: 16,
+                name: "50 Rosas Rojas",
+                price: 237500,
+                image: "/assets/foto16.webp",
+                description: "Impresionante bouquet de 50 rosas rojas en envoltura premium. Una declaración de amor en su máxima expresión.",
+                categories: ["rosas-rojas", "precio-alto"]
+            },
+            {
+                id: 17,
+                name: "Rosas, Margaritas y Astromelias",
+                price: 85000,
+                image: "/assets/foto17.webp",
+                description: "Ramo silvestre de rosas, margaritas y astromelias en tonos suaves. Una mezcla fresca y encantadora para cualquier ocasión.",
+                categories: ["rosas-rosadas", "mix", "precio-bajo"]
+            },
+            {
+                id: 23,
+                name: "Arreglo Girasoles y Rosas Fucsia",
+                price: 122500,
+                image: "/assets/foto23.webp",
+                description: "Arreglo en base con girasoles, rosas fucsia, lirios y flores silvestres. Una explosión de color lista para decorar cualquier rincón.",
+                categories: ["girasoles", "rosas-rosadas", "precio-medio"]
+            },
+            {
+                id: 39,
+                name: "45 Rosas y 10 Lirios",
+                price: 312500,
+                image: "/assets/foto39.webp",
+                description: "Majestuoso arreglo de 45 rosas y diez lirios en composición de gala. Abundancia y elegancia para celebrar a lo grande.",
+                categories: ["rosas-rosadas", "precio-alto"]
+            },
+            {
+                id: 44,
+                name: "10 Rosas y 4 Fotos",
+                price: 87500,
+                image: "/assets/foto44.webp",
+                description: "Diez rosas suaves acompañadas de cuatro fotografías personalizadas en varillas decorativas. Un regalo emotivo que convierte recuerdos en flores.",
+                categories: ["rosas-rosadas", "cajas", "precio-bajo"]
+            },
+            {
+                id: 15,
+                name: "18 Rosas con Corona",
+                price: 127500,
+                image: "/assets/foto15.webp",
+                description: "Ramo de 18 rosas rojas coronado con un detalle de corona elegante. Para tratar a esa persona como la realeza que es.",
+                categories: ["rosas-rojas", "precio-medio"]
+            },
+            {
+                id: 33,
+                name: "10 Rosas y 10 Tulipanes",
+                price: 375000,
+                image: "/assets/foto33.webp",
+                description: "Exclusiva combinación de diez rosas y diez tulipanes importados. Lujo y delicadeza unidos en un ramo inolvidable.",
+                categories: ["tulipanes", "rosas-rosadas", "precio-alto"]
+            },
+            {
+                id: 27,
+                name: "12 Rosas y 3 Ferrero",
+                price: 90000,
+                image: "/assets/foto27.webp",
+                description: "Doce rosas rojas con tres chocolates Ferrero Rocher en presentación romántica. La fórmula infalible para conquistar.",
+                categories: ["rosas-rojas", "chocolates", "precio-bajo"]
+            },
+            {
+                id: 29,
+                name: "Mix Rosado",
+                price: 131250,
+                image: "/assets/foto29.webp",
+                description: "Delicada combinación de flores en tonos rosados con lirios y follaje. Romanticismo y frescura en una sola pieza.",
+                categories: ["rosas-rosadas", "mix", "precio-medio"]
+            },
+            {
+                id: 18,
+                name: "Ramo 20 Tulipanes",
+                price: 525000,
+                image: "/assets/foto18.webp",
+                description: "Exclusivo ramo de 20 tulipanes importados en envoltura de lujo. Distinción y elegancia para un regalo verdaderamente memorable.",
+                categories: ["tulipanes", "precio-alto"]
+            },
+            {
+                id: 21,
+                name: "12 Rosas y 4 Chocolates",
+                price: 95000,
+                image: "/assets/foto21.webp",
+                description: "Docena de rosas rojas en envoltura negra elegante con cuatro chocolates. Romanticismo clásico con un toque dulce.",
+                categories: ["rosas-rojas", "chocolates", "precio-bajo"]
+            },
+            {
+                id: 45,
+                name: "24 Rosas Fucsia",
+                price: 131250,
+                image: "/assets/foto45.webp",
+                description: "Veinticuatro rosas fucsia en envoltura elegante con detalles dorados. Color intenso y sofisticación para una sorpresa inolvidable.",
+                categories: ["rosas-rosadas", "precio-medio"]
+            },
+            {
+                id: 31,
+                name: "30 Girasoles y 25 Rosas",
+                price: 562500,
+                image: "/assets/foto31.webp",
+                description: "Monumental arreglo de 30 girasoles y 25 rosas en presentación de lujo. Nuestra pieza más imponente para ocasiones que merecen lo mejor.",
+                categories: ["girasoles", "rosas-rojas", "precio-alto"]
+            }
+            ];
+        // Formatear precio
+        function formatPrice(price) {
+            return '$' + price.toLocaleString('es-CO');
+        }
+
+        // Renderizar todos los productos
+        function renderProducts() {
+            const grid = document.getElementById('products-grid');
+            
+            grid.innerHTML = products.map(product => `
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
+                        <div class="delivery-badge-product">🚚 Envío Express</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">${product.name}</h3>
+                        <div class="product-description">${product.description}</div>
+                        <div class="product-footer">
+                            <div>
+                                <span class="price-label">Desde</span>
+                                <div class="product-price">${formatPrice(product.price)}</div>
+                            </div>
+                            <a href="https://wa.me/573125961045?text=Hola,%20me%20interesa%20el%20producto:%20${encodeURIComponent(product.name)}%20-%20${formatPrice(product.price)}" 
+                               class="btn-order" 
+                               target="_blank"
+                               onclick="trackConversion()">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                </svg>
+                                Enviar a Domicilio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', function() {
+            renderProducts();
+        });
+    </script>
+</body>
+</html>
+                
