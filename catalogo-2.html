@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZS2BQC8L2H"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PNRL6V5MSP"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-ZS2BQC8L2H');
+  gtag('config', 'G-PNRL6V5MSP');
 </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Catálogo de Floristería Amatista en Cúcuta - 45 productos: bouquets de rosas, girasoles, tulipanes, cajas florales y ramos con chocolates. Entrega a domicilio.">
@@ -599,48 +599,4 @@ const products = [
 
         // Lightbox
         function openLightbox(image, name, price) {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImage = document.getElementById('lightbox-image');
-            const lightboxTitle = document.getElementById('lightbox-title');
-            const lightboxPrice = document.getElementById('lightbox-price');
-
-            lightboxImage.src = image;
-            lightboxImage.alt = name;
-            lightboxTitle.textContent = name;
-            lightboxPrice.textContent = price;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
-        document.getElementById('lightbox').addEventListener('click', function(e) {
-            if (e.target === this) closeLightbox();
-        });
-
-        // Scroll to top
-        const scrollTop = document.getElementById('scroll-top');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 500) {
-                scrollTop.classList.add('visible');
-            } else {
-                scrollTop.classList.remove('visible');
-            }
-        });
-
-        scrollTop.addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Inicializar
-        renderProducts();
-    </script>
-
-
-</body>
-</html>
+            const lightbox = documen
