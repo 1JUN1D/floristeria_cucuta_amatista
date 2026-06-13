@@ -599,4 +599,37 @@ const products = [
 
         // Lightbox
         function openLightbox(image, name, price) {
-            const lightbox = documen
+            document.getElementById('lightbox-image').src = image;
+            document.getElementById('lightbox-image').alt = name;
+            document.getElementById('lightbox-title').textContent = name;
+            document.getElementById('lightbox-price').textContent = price;
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) closeLightbox();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // Botón volver arriba
+        const scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 600) scrollTopBtn.classList.add('visible');
+            else scrollTopBtn.classList.remove('visible');
+        });
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Render inicial
+        renderProducts();
+    </script>
+</body>
+</html>
