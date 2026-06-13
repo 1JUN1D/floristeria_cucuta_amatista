@@ -126,6 +126,40 @@
     z-index: 100;
 }
 
+/* Buscador por nombre o código */
+.catalog-search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.05rem;
+}
+
+#product-search {
+    width: min(480px, 100%);
+    padding: 0.85rem 1.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(22, 18, 28, 0.14);
+    background: #fff;
+    font-family: inherit;
+    font-size: 0.92rem;
+    font-weight: 300;
+    color: var(--catalog-ink);
+    outline: none;
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#product-search::placeholder {
+    color: #9b93a6;
+    letter-spacing: 0.02em;
+}
+
+#product-search:focus {
+    border-color: var(--catalog-primary);
+    box-shadow: 0 0 0 4px rgba(140, 95, 191, 0.12), 0 0 0 1px rgba(201, 168, 106, 0.3);
+}
+
 .filters-container {
     display: flex;
     gap: 0.55rem;
@@ -289,6 +323,16 @@
     flex-direction: column;
     position: relative;
     text-align: center;
+}
+
+/* Código de referencia */
+.product-ref {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    color: var(--catalog-gold-deep);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
 /* Florón separador bajo el nombre */

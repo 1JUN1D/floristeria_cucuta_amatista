@@ -50,6 +50,9 @@
     <!-- Filters -->
     <section class="catalog-filters">
         <div class="container">
+            <div class="catalog-search">
+                <input type="search" id="product-search" placeholder="Buscar por nombre o código (ej. rosas o 014)" aria-label="Buscar producto por nombre o código">
+            </div>
             <div class="filters-container">
                 <span class="filter-label">Filtrar por:</span>
                 <button class="filter-btn active" data-filter="todos">Todos los Productos</button>
@@ -481,8 +484,28 @@ const products = [
     }
 ];
 
+        // Estado de filtro y búsqueda
+        let currentFilter = 'todos';
+        let searchTerm = '';
+
+        // Código de referencia: 001, 002, 003...
+        function productCode(p) {
+            return String(p.id).padStart(3, '0');
+        }
+
+        // URL absoluta de la foto del producto
+        function productPhotoUrl(p) {
+            return 'http://floristeriaamatista.dondeseria.com/' + p.image.replace(/^\//, '');
+        }
+
+        // Normaliza texto para búsqueda sin tildes
+        function normalizeText(t) {
+            return t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+        }
+
         // Renderizar productos
-        function renderProducts(filter = 'todos') {
+        function renderProducts() {
+            const filter = currentFilter;
             const grid = document.getElementById('products-grid');
             const emptyState = document.getElementById('empty-state');
             const resultsCount = document.getElementById('results-count');
@@ -492,6 +515,15 @@ const products = [
             if (filter !== 'todos') {
                 filteredProducts = products.filter(product =>
                     product.categories.includes(filter)
+                );
+            }
+
+            // Búsqueda por nombre o código
+            if (searchTerm.trim()) {
+                const q = normalizeText(searchTerm.trim());
+                filteredProducts = filteredProducts.filter(product =>
+                    normalizeText(product.name).includes(q) ||
+                    productCode(product).includes(q)
                 );
             }
 
@@ -521,6 +553,7 @@ const products = [
                     </div>
                     <div class="product-info">
                         ${product.oldPrice ? `<div class="product-offer-badge">OFERTA</div>` : ''}
+                        <div class="product-ref">Ref. ${productCode(product)}</div>
                         <h3 class="product-name">${product.name}</h3>
                         <div class="product-description">${product.description}</div>
                         <div class="product-footer">
@@ -528,7 +561,7 @@ const products = [
                                 <span class="price-label ${product.oldPrice ? 'price-label-old' : ''}">${product.oldPrice ? formatPrice(product.oldPrice) : 'Desde'}</span>
                                 <div class="product-price">${formatPrice(product.price)}</div>
                             </div>
-                            <a href="https://wa.me/573125961045?text=Hola,%20me%20interesa%20el%20producto:%20${encodeURIComponent(product.name)}%20-%20${formatPrice(product.price)}"
+                            <a href="https://wa.me/573125961045?text=${encodeURIComponent('Hola, me interesa el producto: ' + product.name + ' (Ref. ' + productCode(product) + ') - ' + formatPrice(product.price) + ' | Foto: ' + productPhotoUrl(product))}"
                                class="btn-order"
                                target="_blank">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -552,9 +585,16 @@ const products = [
             btn.addEventListener('click', function() {
                 document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
-                renderProducts(this.dataset.filter);
+                currentFilter = this.dataset.filter;
+                renderProducts();
                 window.scrollTo({ top: 400, behavior: 'smooth' });
             });
+        });
+
+        // Buscador por nombre o código
+        document.getElementById('product-search').addEventListener('input', function() {
+            searchTerm = this.value;
+            renderProducts();
         });
 
         // Lightbox

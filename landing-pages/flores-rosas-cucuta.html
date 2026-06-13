@@ -40,18 +40,29 @@
         }
 
         :root {
-            --primary: #9966CC;
-            --secondary: #7A4FA8;
-            --accent: #B57EDC;
-            --dark: #1a1a1a;
-            --light: #ffffff;
-            --gray: #666;
+            --primary: #6E4496;
+            --secondary: #8C5FBF;
+            --accent: #C9A86A;
+            --ink: #14101B;
+            --ink-2: #221B2E;
+            --gold: #C9A86A;
+            --gold-dark: #A8853F;
+            --cream: #F8F5F0;
+            --lavender: #F5F1FA;
+            --hairline: rgba(22, 18, 28, 0.09);
+            --dark: #2B2433;
+            --light: #FDFCFB;
+            --gray: #6B6375;
+            --whatsapp: #1EBE5D;
+            --whatsapp-dark: #169549;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
+            font-weight: 300;
             color: var(--dark);
-            line-height: 1.6;
+            line-height: 1.85;
+            background: var(--light);
             overflow-x: hidden;
         }
 
@@ -65,76 +76,112 @@
            HERO SECTION
            =================================== */
         .hero {
-            background: linear-gradient(135deg, #9966CC 0%, #7A4FA8 50%, #B57EDC 100%);
+            background: radial-gradient(900px 420px at 50% -150px, rgba(140, 95, 191, 0.45), transparent 70%), linear-gradient(160deg, #14101B 0%, #221B2E 100%);
             color: white;
-            padding: 80px 20px 60px;
+            padding: 90px 20px 70px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 22px;
+            border: 1px solid rgba(201, 168, 106, 0.22);
+            border-radius: 4px;
+            pointer-events: none;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3rem;
             margin-bottom: 1rem;
-            font-weight: 700;
+            font-weight: 600;
+            letter-spacing: -0.01em;
             line-height: 1.2;
         }
 
+        .hero h1::after {
+            content: '';
+            display: block;
+            width: 64px;
+            height: 1px;
+            margin: 1.25rem auto 0;
+            background: #C9A86A;
+            box-shadow: 0 0 16px rgba(201, 168, 106, 0.55);
+        }
+
         .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            opacity: 0.95;
+            font-size: 0.72rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.32em;
+            font-weight: 300;
+            color: #C9A86A;
         }
 
         .hero p {
-            font-size: 1.125rem;
-            max-width: 800px;
+            font-size: 1.02rem;
+            max-width: 760px;
             margin: 0 auto 2rem;
-            opacity: 0.9;
+            color: rgba(255, 255, 255, 0.72);
+            line-height: 1.95;
         }
 
         .hero-keywords {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1rem;
+            gap: 0.85rem;
             margin-top: 2rem;
         }
 
         .keyword-badge {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.06);
             backdrop-filter: blur(10px);
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.6rem 1.4rem;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(201, 168, 106, 0.32);
         }
 
         .cta-hero {
             display: inline-block;
-            padding: 1.25rem 3rem;
-            background: white;
-            color: var(--primary);
-            border-radius: 50px;
+            padding: 1.15rem 3rem;
+            background: linear-gradient(135deg, #8C5FBF, #6E4496);
+            color: #FDFCFB;
+            border-radius: 999px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.125rem;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-            margin-top: 1rem;
+            font-weight: 500;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            box-shadow: 0 14px 34px rgba(110, 68, 150, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 1.5rem;
         }
 
         .cta-hero:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 20px 44px rgba(110, 68, 150, 0.5);
         }
 
         /* ===================================
            FEATURES SECTION
            =================================== */
         .features {
-            padding: 60px 20px;
-            background: white;
+            padding: 80px 20px;
+            background: var(--light);
         }
 
         .features-grid {
@@ -146,54 +193,79 @@
 
         .feature-card {
             text-align: center;
-            padding: 2rem;
-            border-radius: 16px;
-            background: #fafafa;
-            transition: all 0.3s ease;
+            padding: 2.25rem 2rem;
+            border-radius: 18px;
+            background: var(--lavender);
+            border: 1px solid var(--hairline);
+            box-shadow: 0 1px 2px rgba(22, 18, 28, 0.04), 0 10px 28px rgba(22, 18, 28, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .feature-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(153, 102, 204, 0.15);
+            box-shadow: 0 18px 44px rgba(22, 18, 28, 0.08);
         }
 
         .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 2.2rem;
+            margin: 0 auto 1.25rem;
+            width: 84px;
+            height: 84px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border: 1px solid rgba(201, 168, 106, 0.4);
+            border-radius: 50%;
         }
 
         .feature-card h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
             margin-bottom: 0.75rem;
             color: var(--primary);
         }
 
         .feature-card p {
             color: var(--gray);
-            font-size: 0.95rem;
+            font-size: 0.92rem;
+            line-height: 1.8;
         }
 
         /* ===================================
            PRODUCTS SECTION
            =================================== */
         .products-section {
-            padding: 60px 20px;
-            background: #fafafa;
+            padding: 80px 20px;
+            background: var(--cream);
         }
 
         .section-title {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
             text-align: center;
             margin-bottom: 1rem;
             color: var(--dark);
         }
 
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 64px;
+            height: 1px;
+            margin: 1.1rem auto 0;
+            background: #C9A86A;
+        }
+
         .section-subtitle {
             text-align: center;
             color: var(--gray);
-            font-size: 1.125rem;
+            font-size: 1.02rem;
+            line-height: 1.9;
             margin-bottom: 3rem;
             max-width: 700px;
             margin-left: auto;
@@ -208,53 +280,77 @@
         }
 
         .product-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
+            background: #fff;
+            border-radius: 999px 999px 22px 22px;
+            padding: 12px 12px 0;
+            border: 1px solid rgba(22, 18, 28, 0.07);
+            box-shadow: 0 1px 2px rgba(22, 18, 28, 0.04), 0 14px 34px rgba(22, 18, 28, 0.06);
+            transition: transform .4s cubic-bezier(.25, .6, .3, 1), box-shadow .4s;
         }
 
         .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 32px rgba(153, 102, 204, 0.2);
+            transform: translateY(-9px);
+            box-shadow: 0 34px 70px rgba(110, 68, 150, 0.18);
         }
 
         .product-image-container {
             position: relative;
             width: 100%;
-            aspect-ratio: 1 / 1;
+            aspect-ratio: 1 / 1.12;
             overflow: hidden;
+            border-radius: 999px 999px 14px 14px;
+            box-shadow: 0 0 0 1px rgba(201, 168, 106, 0.45);
         }
 
         .product-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: transform 1.1s cubic-bezier(.25, .6, .3, 1);
         }
 
         .product-card:hover .product-image {
-            transform: scale(1.05);
+            transform: scale(1.06);
         }
 
         .product-info {
-            padding: 1.5rem;
+            padding: 1.5rem 1.25rem 1.6rem;
+            text-align: center;
+        }
+
+        .product-ref {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.32em;
+            color: #A8853F;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
         }
 
         .product-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-size: 1.38rem;
+            letter-spacing: -0.01em;
             color: var(--dark);
             margin-bottom: 1rem;
-            font-weight: 600;
+            font-weight: 500;
+        }
+
+        .product-name::after {
+            content: '·❦·';
+            display: block;
+            color: #C9A86A;
+            font-size: .8rem;
+            letter-spacing: .4em;
+            margin-top: .55rem;
+            font-family: 'Playfair Display', serif;
         }
 
         .product-description {
             color: var(--gray);
-            line-height: 1.6;
+            line-height: 1.8;
             margin-bottom: 1.5rem;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
         }
 
         .product-footer {
@@ -262,48 +358,53 @@
             justify-content: space-between;
             align-items: center;
             padding-top: 1rem;
-            border-top: 2px solid #f0f0f0;
+            border-top: 1px solid rgba(22, 18, 28, 0.09);
         }
 
         .product-price {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            color: var(--primary);
-            font-weight: 700;
+            font-size: 1.72rem;
+            color: #6E4496;
+            font-weight: 500;
         }
 
         .price-label {
-            font-size: 0.75rem;
-            color: var(--gray);
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: .24em;
+            color: #9b93a6;
             display: block;
             margin-bottom: 0.25rem;
         }
 
         .btn-order {
-            padding: 0.875rem 2rem;
-            background: linear-gradient(135deg, var(--accent) 0%, #8E5BBF 100%);
+            padding: 0.8rem 1.6rem;
+            background: #1EBE5D;
             color: white;
             border: none;
-            border-radius: 50px;
-            font-weight: 600;
+            border-radius: 999px;
+            font-weight: 500;
+            font-size: .79rem;
+            text-transform: uppercase;
+            letter-spacing: .14em;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
             text-decoration: none;
-            box-shadow: 0 4px 12px rgba(181, 126, 220, 0.3);
+            box-shadow: 0 10px 24px rgba(30, 190, 93, 0.28);
         }
 
         .btn-order:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(181, 126, 220, 0.4);
-            background: linear-gradient(135deg, #8E5BBF 0%, #558B2F 100%);
+            box-shadow: 0 14px 30px rgba(30, 190, 93, 0.28);
+            background: #169549;
         }
 
         .btn-order svg {
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
         }
 
         /* ===================================
@@ -315,23 +416,24 @@
             height: 70px;
             bottom: 30px;
             right: 30px;
-            background-color: #25d366;
+            background-color: #1EBE5D;
             color: #FFF;
             border-radius: 50%;
             text-align: center;
             font-size: 40px;
-            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 10px 24px rgba(30, 190, 93, 0.28);
             z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
             text-decoration: none;
         }
 
         .whatsapp-float:hover {
             transform: scale(1.1);
-            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+            background-color: #169549;
+            box-shadow: 0 14px 30px rgba(30, 190, 93, 0.28);
         }
 
         .whatsapp-float svg {
@@ -344,8 +446,8 @@
            TRUST SECTION
            =================================== */
         .trust-section {
-            background: white;
-            padding: 60px 20px;
+            background: var(--lavender);
+            padding: 80px 20px;
             text-align: center;
         }
 
@@ -366,11 +468,17 @@
         }
 
         .trust-badge-icon {
-            font-size: 3rem;
+            font-size: 1.8rem;
+            background: #fff;
+            border: 1px solid rgba(201, 168, 106, 0.4);
+            border-radius: 999px;
+            padding: 0.85rem 1.5rem;
+            box-shadow: 0 1px 2px rgba(22, 18, 28, 0.04), 0 10px 28px rgba(22, 18, 28, 0.05);
         }
 
         .trust-badge-text {
-            font-weight: 600;
+            font-weight: 500;
+            font-size: 0.92rem;
             color: var(--dark);
         }
 
@@ -425,6 +533,13 @@
             .whatsapp-float svg {
                 width: 35px;
                 height: 35px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: .01ms !important;
+                transition-duration: .01ms !important;
             }
         }
     </style>
@@ -779,6 +894,16 @@ const products = [
             return '$' + price.toLocaleString('es-CO');
         }
 
+        // Código de referencia: 001, 002, 003...
+        function productCode(p) {
+            return String(p.id).padStart(3, '0');
+        }
+
+        // URL absoluta de la foto del producto
+        function productPhotoUrl(p) {
+            return 'http://floristeriaamatista.dondeseria.com/' + p.image.replace(/^\//, '');
+        }
+
         // Renderizar todos los productos
         function renderProducts() {
             const grid = document.getElementById('products-grid');
@@ -789,6 +914,7 @@ const products = [
                         <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
                     </div>
                     <div class="product-info">
+                        <div class="product-ref">Ref. ${productCode(product)}</div>
                         <h3 class="product-name">${product.name}</h3>
                         <div class="product-description">${product.description}</div>
                         <div class="product-footer">
@@ -796,7 +922,7 @@ const products = [
                                 <span class="price-label">Desde</span>
                                 <div class="product-price">${formatPrice(product.price)}</div>
                             </div>
-                            <a href="https://wa.me/573125961045?text=Hola,%20me%20interesa%20el%20producto:%20${encodeURIComponent(product.name)}%20-%20${formatPrice(product.price)}" 
+                            <a href="https://wa.me/573125961045?text=${encodeURIComponent('Hola, me interesa el producto: ' + product.name + ' (Ref. ' + productCode(product) + ') - ' + formatPrice(product.price) + ' | Foto: ' + productPhotoUrl(product))}" 
                                class="btn-order" 
                                target="_blank"
                                onclick="trackConversion()">
