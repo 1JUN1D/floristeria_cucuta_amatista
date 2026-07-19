@@ -919,7 +919,7 @@
 
     <div class="results-counter">
         <div class="container">
-            Mostrando <strong id="results-count">45</strong> productos
+            Mostrando <strong id="results-count">48</strong> productos
         </div>
     </div>
 
@@ -1137,6 +1137,7 @@
 
         // ====== Datos de productos (catalogo completo) ======
         const products = [
+    /* OCULTO (precio inferior a $60.000 COP) - no visible ni buscable
     {
         id: 1,
         name: "Margaritas y Lirios",
@@ -1145,6 +1146,7 @@
         description: "Ramo fresco de lirios amarillos y margaritas blancas con follaje verde en envoltura delicada. Un detalle luminoso y alegre, perfecto para iluminar el día de alguien especial.",
         categories: ["mix", "precio-bajo"]
     },
+    */
     {
         id: 19,
         name: "Girasoles y Rosas",
@@ -1161,6 +1163,7 @@
         description: "Bouquet de girasoles y lirios amarillos acompañado de deliciosos chocolates. Un regalo completo que combina dulzura y esplendor.",
         categories: ["girasoles", "chocolates", "precio-medio"]
     },
+    /* OCULTO (precio inferior a $60.000 COP) - no visible ni buscable
     {
         id: 5,
         name: "Margaritas y Lirios Rosa",
@@ -1169,6 +1172,7 @@
         description: "Tierno ramo de lirios rosados y margaritas blancas con envoltura suave. Delicado y romántico, ideal para cualquier ocasión especial.",
         categories: ["mix", "precio-bajo"]
     },
+    */
     {
         id: 28,
         name: "Ramo Mix",
@@ -1185,6 +1189,7 @@
         description: "Dieciocho rosas rojas con tres girasoles en envoltura elegante. Una combinación vibrante que enamora al instante.",
         categories: ["rosas-rojas", "girasoles", "precio-medio"]
     },
+    /* OCULTO (precio inferior a $60.000 COP) - no visible ni buscable
     {
         id: 6,
         name: "4 Girasoles",
@@ -1193,6 +1198,7 @@
         description: "Bouquet de cuatro girasoles frescos con follaje y envoltura rosa. Un detalle sencillo que transmite luz y buenos deseos.",
         categories: ["girasoles", "precio-bajo"]
     },
+    */
     {
         id: 35,
         name: "12 Rosas y 2 Girasoles",
@@ -1209,6 +1215,7 @@
         description: "Sofisticada mezcla de rosas y flores selectas en envoltura premium. Un regalo de categoría para sorprender con estilo.",
         categories: ["mix", "rosas-rojas", "precio-medio"]
     },
+    /* OCULTO (precio inferior a $60.000 COP) - no visible ni buscable
     {
         id: 26,
         name: "Margaritas y Astromelias",
@@ -1217,6 +1224,7 @@
         description: "Tierno ramo de margaritas blancas y astromelias en tonos cálidos. Sencillo, fresco y perfecto para alegrar el día.",
         categories: ["mix", "precio-bajo"]
     },
+    */
     {
         id: 24,
         name: "12 Rosas y Astromelias",
@@ -1233,6 +1241,7 @@
         description: "Espectacular ramo de 20 rosas con lirios en envoltura azul de lujo. Una combinación abundante que impresiona a primera vista.",
         categories: ["rosas-rosadas", "mix", "precio-medio"]
     },
+    /* OCULTO (precio inferior a $60.000 COP) - no visible ni buscable
     {
         id: 36,
         name: "Margaritas x2",
@@ -1241,6 +1250,7 @@
         description: "Ramo doble de margaritas en tonos lila y blanco con envoltura suave. Frescura silvestre para un detalle espontáneo.",
         categories: ["mix", "precio-bajo"]
     },
+    */
     {
         id: 38,
         name: "10 Rosas y 8 Chocolates",
@@ -1496,6 +1506,70 @@
         image: "/assets/foto31.webp",
         description: "Monumental arreglo de 30 girasoles y 25 rosas en presentación de lujo. Nuestra pieza más imponente para ocasiones que merecen lo mejor.",
         categories: ["girasoles", "rosas-rojas", "precio-alto"]
+    },
+    {
+        id: 49,
+        name: "Caja de Rosas y Margaritas",
+        price: 125000,
+        image: "/assets/foto49.webp",
+        description: "Elegante caja redonda negra con acabado dorado que reúne rosas rosadas y margaritas blancas, coronada con un portatarjeta en forma de corazón para tu mensaje. Un detalle refinado y romántico para sorprender.",
+        categories: ["cajas", "rosas-rosadas", "precio-medio"]
+    },
+    {
+        id: 50,
+        name: "8 Rosas Rojas",
+        price: 65000,
+        image: "/assets/foto50.webp",
+        description: "Ramo de ocho rosas rojas frescas con follaje verde, envueltas en papel negro con lazo rojo. Un clásico romántico, sobrio y elegante para decir 'te amo'.",
+        categories: ["rosas-rojas", "precio-bajo"]
+    },
+    {
+        id: 51,
+        name: "Caja Globo Rosas y Margaritas",
+        price: 143750,
+        image: "/assets/foto51.webp",
+        description: "Encantadora caja rosa con rosas rosadas y margaritas blancas, decorada con un globo tipo aerostático y portatarjeta. Una sorpresa tierna y original que eleva cualquier celebración.",
+        categories: ["cajas", "rosas-rosadas", "precio-medio"]
+    },
+    {
+        id: 52,
+        name: "Rosas Rojas y Margaritas con Mariposas",
+        price: 87500,
+        image: "/assets/foto52.webp",
+        description: "Romántico ramo de rosas rojas y margaritas blancas en envoltura crema con detalles dorados, mariposas decorativas y portatarjeta. Delicadeza y pasión en un mismo detalle.",
+        categories: ["rosas-rojas", "mix", "precio-bajo"]
+    },
+    {
+        id: 53,
+        name: "Rosas Blancas y Lirios",
+        price: 106250,
+        image: "/assets/foto53.webp",
+        description: "Sofisticado ramo de rosas color marfil y lirios blancos con follaje fresco, en envoltura gris y blanca. Pura elegancia para expresar cariño, gratitud o respeto.",
+        categories: ["mix", "precio-medio"]
+    },
+    {
+        id: 54,
+        name: "Lirios y Pompones Rosados",
+        price: 85000,
+        image: "/assets/foto54.webp",
+        description: "Fresco ramo de lirios blancos con pompones rosados y solidago, envuelto en papel blanco con lazo rosa. Una composición tierna y luminosa para alegrar el día.",
+        categories: ["mix", "precio-bajo"]
+    },
+    {
+        id: 55,
+        name: "24 Rosas Rojas",
+        price: 131250,
+        image: "/assets/foto55.webp",
+        description: "Espectacular ramo de 24 rosas rojas con solidago, en envoltura negra con elegantes líneas cuadriculadas. Abundancia y pasión para una declaración inolvidable.",
+        categories: ["rosas-rojas", "precio-medio"]
+    },
+    {
+        id: 56,
+        name: "Rosas Rojas con Inicial Personalizada",
+        price: 231250,
+        image: "/assets/foto56.webp",
+        description: "Majestuoso ramo de rosas rojas rodeado de gypsophila, con una inicial personalizada formada en su centro y envoltura de tul negro. Nuestra pieza más romántica y exclusiva para sorprender en grande.",
+        categories: ["rosas-rojas", "precio-alto"]
     }
 ];
 
