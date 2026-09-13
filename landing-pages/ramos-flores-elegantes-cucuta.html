@@ -919,6 +919,82 @@
         </div>
     </section>
 
+<!-- ===== ESTILOS PROMO SEPTIEMBRE ===== -->
+<style>
+.promo-section{padding:4.5rem 0 3.5rem;position:relative;overflow:hidden;scroll-margin-top:90px}
+.promo-amarillas{background:linear-gradient(160deg,#FFFBEF 0%,#FFF4D6 55%,#FFFBEF 100%)}
+.promo-amor{background:linear-gradient(160deg,#FFF6F8 0%,#FBECF4 55%,#FFF6F8 100%)}
+.promo-section .container{position:relative;z-index:2}
+.promo-head{text-align:center;max-width:820px;margin:0 auto 3rem}
+.promo-kicker{display:inline-block;font-family:'Poppins',system-ui,sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:.5rem 1.15rem;border-radius:999px;margin-bottom:1.1rem}
+.promo-amarillas .promo-kicker{background:#1F1A10;color:#FFD54A}
+.promo-amor .promo-kicker{background:#3B1330;color:#FFC2DC}
+.promo-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.12;margin:0 0 .85rem;color:#14101B}
+.promo-amarillas .promo-title{color:#4A3708}
+.promo-amor .promo-title{color:#4A1038}
+.promo-sub{font-family:'Poppins',system-ui,sans-serif;font-size:1rem;line-height:1.65;color:#6B6375;margin:0 auto 1.8rem;max-width:640px}
+.promo-countdown{display:flex;justify-content:center;gap:.7rem;flex-wrap:wrap;margin-bottom:.9rem}
+.cd-unit{min-width:74px;padding:.85rem .6rem;border-radius:16px;background:rgba(255,255,255,.85);border:1px solid rgba(22,18,28,.08);box-shadow:0 8px 22px rgba(22,18,28,.07);display:flex;flex-direction:column;align-items:center}
+.cd-num{font-family:'Playfair Display',Georgia,serif;font-size:1.9rem;font-weight:700;line-height:1;color:#14101B;font-variant-numeric:tabular-nums}
+.promo-amarillas .cd-num{color:#8A6400}
+.promo-amor .cd-num{color:#A01A64}
+.cd-lbl{font-family:'Poppins',system-ui,sans-serif;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#6B6375;margin-top:.4rem}
+.promo-countdown.is-done{gap:0}
+.cd-done{font-family:'Poppins',system-ui,sans-serif;font-size:.95rem;font-weight:600;padding:.85rem 1.5rem;border-radius:999px;background:rgba(255,255,255,.9);border:1px solid rgba(22,18,28,.08)}
+.promo-amarillas .cd-done{color:#8A6400}
+.promo-amor .cd-done{color:#A01A64}
+.promo-note{font-family:'Poppins',system-ui,sans-serif;font-size:.8rem;color:#6B6375;margin:0}
+.promo-section .products-grid{grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2.6rem 2rem}
+.promo-cta{text-align:center;margin-top:3rem}
+.promo-cta a{display:inline-flex;align-items:center;gap:.6rem;font-family:'Poppins',system-ui,sans-serif;font-size:.92rem;font-weight:600;text-decoration:none;padding:1rem 2.1rem;border-radius:999px;transition:transform .3s ease,box-shadow .3s ease}
+.promo-amarillas .promo-cta a{background:#1F1A10;color:#FFD54A}
+.promo-amor .promo-cta a{background:#3B1330;color:#FFC2DC}
+.promo-cta a:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(22,18,28,.22)}
+@media(max-width:600px){.promo-section{padding:3rem 0 2.5rem}.cd-unit{min-width:64px;padding:.7rem .45rem}.cd-num{font-size:1.5rem}.promo-section .products-grid{grid-template-columns:1fr}}
+</style>
+
+<section class="promo-section promo-amarillas" id="promo-amarillas">
+    <div class="container">
+        <div class="promo-head">
+            <span class="promo-kicker">21 de septiembre</span>
+            <h2 class="promo-title">D&iacute;a de las Flores Amarillas</h2>
+            <p class="promo-sub">Regala luz, prosperidad y buenos deseos. Girasoles frescos del d&iacute;a, armados a mano y entregados en toda C&uacute;cuta.</p>
+            <div class="promo-countdown" data-target="2026-09-21T00:00:00-05:00" data-done="&iexcl;Hoy es el D&iacute;a de las Flores Amarillas!">
+                <div class="cd-unit"><span class="cd-num" data-cd="d">--</span><span class="cd-lbl">D&iacute;as</span></div>
+                <div class="cd-unit"><span class="cd-num" data-cd="h">--</span><span class="cd-lbl">Horas</span></div>
+                <div class="cd-unit"><span class="cd-num" data-cd="m">--</span><span class="cd-lbl">Min</span></div>
+                <div class="cd-unit"><span class="cd-num" data-cd="s">--</span><span class="cd-lbl">Seg</span></div>
+            </div>
+            <p class="promo-note">Pedidos con entrega el mismo d&iacute;a en toda C&uacute;cuta &middot; Cupos limitados</p>
+        </div>
+        <div class="products-grid" id="promo-grid-amarillas"></div>
+        <div class="promo-cta">
+            <a href="https://wa.me/573125961045?text=Hola%2C%20quiero%20reservar%20un%20arreglo%20de%20FLORES%20AMARILLAS%20para%20el%2021%20de%20septiembre" target="_blank" rel="noopener">Reservar mis flores amarillas</a>
+        </div>
+    </div>
+</section>
+
+<section class="promo-section promo-amor" id="promo-amor">
+    <div class="container">
+        <div class="promo-head">
+            <span class="promo-kicker">19 de septiembre</span>
+            <h2 class="promo-title">Amor y Amistad</h2>
+            <p class="promo-sub">Los arreglos m&aacute;s pedidos para el 19 de septiembre. Rosas, lirios, gerberas y chocolates con entrega a domicilio el mismo d&iacute;a.</p>
+            <div class="promo-countdown" data-target="2026-09-19T00:00:00-05:00" data-done="&iexcl;Hoy se celebra Amor y Amistad!">
+                <div class="cd-unit"><span class="cd-num" data-cd="d">--</span><span class="cd-lbl">D&iacute;as</span></div>
+                <div class="cd-unit"><span class="cd-num" data-cd="h">--</span><span class="cd-lbl">Horas</span></div>
+                <div class="cd-unit"><span class="cd-num" data-cd="m">--</span><span class="cd-lbl">Min</span></div>
+                <div class="cd-unit"><span class="cd-num" data-cd="s">--</span><span class="cd-lbl">Seg</span></div>
+            </div>
+            <p class="promo-note">Pedidos con entrega el mismo d&iacute;a en toda C&uacute;cuta &middot; Cupos limitados</p>
+        </div>
+        <div class="products-grid" id="promo-grid-amor"></div>
+        <div class="promo-cta">
+            <a href="https://wa.me/573125961045?text=Hola%2C%20quiero%20reservar%20un%20arreglo%20para%20AMOR%20Y%20AMISTAD%20del%2019%20de%20septiembre" target="_blank" rel="noopener">Reservar mi detalle de Amor y Amistad</a>
+        </div>
+    </div>
+</section>
+
     <section class="catalog-filters">
         <div class="container">
             <div class="catalog-search">
@@ -943,7 +1019,7 @@
 
     <div class="results-counter">
         <div class="container">
-            Mostrando <strong id="results-count">48</strong> productos
+            Mostrando <strong id="results-count">81</strong> productos
         </div>
     </div>
 
@@ -1609,6 +1685,304 @@
         image: "/assets/foto56.webp",
         description: "Majestuoso ramo de rosas rojas rodeado de gypsophila, con una inicial personalizada formada en su centro y envoltura de tul negro. Nuestra pieza más romántica y exclusiva para sorprender en grande.",
         categories: ["rosas-rojas", "precio-alto"]
+    },
+    /* ===== PROMOCIONES SEPTIEMBRE 2026 · Amor y Amistad (19) + Flores Amarillas (21) ===== */
+    {
+        id: 57,
+        name: "Caja de Rosas Fucsia y Margaritas",
+        price: 131250,
+        image: "/assets/foto57.webp",
+        description: "Elegante caja negra rebosante de rosas fucsia y margaritas blancas, coronada con portatarjeta en forma de corazón. Un detalle sofisticado que se ve tan especial como se siente.",
+        categories: ["cajas", "rosas-rosadas", "precio-medio"],
+        promo: "amor"
+    },
+    {
+        id: 58,
+        name: "Gran Ramo de Lirios y Rosas Premium",
+        price: 325000,
+        image: "/assets/foto58.webp",
+        description: "Ramo monumental de lirios rosados, rosas fucsia y blancas, margaritas y mariposas doradas en envoltura de gala. Nuestra pieza más imponente para una declaración inolvidable.",
+        categories: ["mix", "rosas-rosadas", "precio-alto"],
+        promo: "amor"
+    },
+    {
+        id: 59,
+        name: "Lirios Rosados y Margaritas",
+        price: 131250,
+        image: "/assets/foto59.webp",
+        description: "Ramo alto de lirios rosados en plena apertura con margaritas blancas y envoltura rosa con lazo de seda. Delicadeza pura para quien merece lo mejor.",
+        categories: ["mix", "precio-medio"],
+        promo: "amor"
+    },
+    {
+        id: 60,
+        name: "Girasoles y Rosas con Mariposas",
+        price: 97500,
+        image: "/assets/foto60.webp",
+        description: "Girasoles grandes con rosas rojas, statice morado y mariposas doradas sobre envoltura negra. Fuerza y pasión en una composición que no pasa desapercibida.",
+        categories: ["girasoles", "rosas-rojas", "precio-bajo"],
+        promo: "amor"
+    },
+    {
+        id: 61,
+        name: "Girasoles y Pompones Rosados",
+        price: 65000,
+        image: "/assets/foto61.webp",
+        description: "Girasoles frescos combinados con pompones rosados y margaritas en envoltura lila. Una mezcla alegre y luminosa para sacar una sonrisa al instante.",
+        categories: ["girasoles", "mix", "precio-bajo"],
+        promo: "amor"
+    },
+    {
+        id: 62,
+        name: "Girasoles, Rosas Rojas y Margaritas",
+        price: 97500,
+        image: "/assets/foto62.webp",
+        description: "Dos girasoles centrales rodeados de rosas rojas, margaritas y solidago en envoltura kraft con lazo rojo. El equilibrio perfecto entre alegría y romance.",
+        categories: ["girasoles", "rosas-rojas", "precio-bajo"],
+        promo: "amor"
+    },
+    {
+        id: 63,
+        name: "9 Rosas Rojas Elegantes",
+        price: 45000,
+        image: "/assets/foto63.webp",
+        description: "Nueve rosas rojas en envoltura negra con lazo rojo y mariposa dorada. Un clásico impecable para decir lo que sientes sin rodeos.",
+        categories: ["rosas-rojas", "precio-bajo"],
+        promo: "amor"
+    },
+    {
+        id: 64,
+        name: "Gerberas y Astromelias Rosadas",
+        price: 81250,
+        image: "/assets/foto64.webp",
+        description: "Gerberas en tonos durazno y rosa con astromelias y solidago, envueltas en papel translúcido con lazo malva. Frescura suave para un detalle lleno de ternura.",
+        categories: ["mix", "precio-bajo"],
+        promo: "amor"
+    },
+    {
+        id: 65,
+        name: "Rosas Rojas y Ferrero Rocher",
+        price: 115000,
+        image: "/assets/foto65.webp",
+        description: "Rosas rojas intercaladas con chocolates Ferrero Rocher, margaritas y solidago en envoltura lila. Romance y dulzura en un mismo regalo.",
+        categories: ["rosas-rojas", "chocolates", "precio-medio"],
+        promo: "amor"
+    },
+    {
+        id: 66,
+        name: "Lirios Blancos y Pompones",
+        price: 112500,
+        image: "/assets/foto66.webp",
+        description: "Lirios blancos abiertos con pompones amarillos, rosas rosadas y follaje fresco en envoltura blanca. Elegancia serena para ocasiones que merecen distinción.",
+        categories: ["mix", "precio-medio"],
+        promo: "amor"
+    },
+    {
+        id: 67,
+        name: "Lirios y Rosas Rosadas",
+        price: 92000,
+        image: "/assets/foto67.webp",
+        description: "Lirios rosados acompañados de rosas rosadas y durazno en envoltura blanca con lazo de raso. Un regalo romántico, fino y siempre acertado.",
+        categories: ["rosas-rosadas", "mix", "precio-bajo"],
+        promo: "amor"
+    },
+    {
+        id: 68,
+        name: "Ramo de 5 Girasoles",
+        price: 85000,
+        image: "/assets/foto68.webp",
+        description: "Cinco girasoles frescos con solidago amarillo en envoltura negra con líneas doradas y lazo amarillo. Puro sol en tus manos para el Día de las Flores Amarillas.",
+        categories: ["girasoles", "precio-bajo"],
+        promo: "amarillas"
+    },
+    {
+        id: 69,
+        name: "Gerberas Rosadas y Rosas Blancas",
+        price: 125000,
+        image: "/assets/foto69.webp",
+        description: "Gerberas rosadas de gran tamaño con rosas blancas y margaritas en envoltura rosa empolvado. Una composición fresca y femenina que enamora a primera vista.",
+        categories: ["mix", "precio-medio"],
+        promo: "amor"
+    },
+    {
+        id: 70,
+        name: "Caja Corazón de Rosas, Chocolates y Foto",
+        price: 137500,
+        image: "/assets/foto70.webp",
+        description: "Caja con rosas rojas, corazón de chocolates Ferrero, tarjeta personalizada y espacio para su foto favorita. El regalo más personal para reconquistar o celebrar.",
+        categories: ["cajas", "rosas-rojas", "chocolates", "precio-medio"],
+        promo: "amor"
+    },
+    {
+        id: 71,
+        name: "18 Rosas Rojas en Cascada",
+        price: 80000,
+        image: "/assets/foto71.webp",
+        description: "Dieciocho rosas rojas dispuestas en cascada con solidago y statice, en envoltura crema con lazo rosa. Abundancia y elegancia a un precio que sorprende.",
+        categories: ["rosas-rojas", "precio-bajo"],
+        promo: "amor"
+    },
+    {
+        id: 72,
+        name: "Tulipanes Lila y Claveles",
+        price: 231250,
+        image: "/assets/foto72.webp",
+        description: "Tulipanes lila importados con claveles rosados en envoltura durazno de acabado premium. Exclusividad y buen gusto para quien lo tiene todo.",
+        categories: ["tulipanes", "mix", "precio-alto"],
+        promo: "amor"
+    },
+    {
+        id: 73,
+        name: "25 Rosas Rojas Deluxe",
+        price: 160000,
+        image: "/assets/foto73.webp",
+        description: "Veinticinco rosas rojas con margaritas y follaje fresco en envoltura negra con lazos rojo y rosa. Una declaración de amor imposible de olvidar.",
+        categories: ["rosas-rojas", "precio-medio"],
+        promo: "amor"
+    },
+    {
+        id: 74,
+        name: "12 Rosas Rojas en Lila",
+        price: 90000,
+        image: "/assets/foto74.webp",
+        description: "Docena de rosas rojas con solidago y margaritas en envoltura lila con lazo de raso y tarjeta. Romántico, vistoso y listo para entregar hoy mismo.",
+        categories: ["rosas-rojas", "precio-bajo"],
+        promo: "amor"
+    },
+    {
+        id: 75,
+        name: "Ramo de Lirios Rosados",
+        price: 47500,
+        image: "/assets/foto75.webp",
+        description: "Lirios rosados abiertos con margaritas blancas y solidago en envoltura rosa palo con detalles dorados. Un detalle delicado que ilumina cualquier día.",
+        categories: ["mix", "precio-bajo"],
+        promo: "amor"
+    },
+    {
+        id: 76,
+        name: "Rosas Rojas y Chocolates Ferrero",
+        price: 100000,
+        image: "/assets/foto76.webp",
+        description: "Rosas rojas y chocolates Ferrero Rocher con margaritas blancas en envoltura blanca con moño dorado. El dúo clásico que nunca falla en Amor y Amistad.",
+        categories: ["rosas-rojas", "chocolates", "precio-medio"],
+        promo: "amor"
+    },
+    {
+        id: 77,
+        name: "Girasol y Rosas Rojas",
+        price: 58750,
+        image: "/assets/foto77.webp",
+        description: "Un girasol protagonista rodeado de rosas rojas, margaritas y solidago en envoltura crema con lazo amarillo. Detalle pequeño, impacto enorme.",
+        categories: ["girasoles", "rosas-rojas", "precio-bajo"],
+        promo: "amor"
+    },
+    {
+        id: 78,
+        name: "Girasoles y Margaritas Blancas",
+        price: 65000,
+        image: "/assets/foto78.webp",
+        description: "Girasoles frescos acompañados de margaritas blancas y toques de solidago en envoltura negra. Luz y frescura campestre para celebrar el 21 de septiembre.",
+        categories: ["girasoles", "precio-bajo"],
+        promo: "amarillas"
+    },
+    {
+        id: 79,
+        name: "15 Rosas Rojas y Margaritas",
+        price: 81250,
+        image: "/assets/foto79.webp",
+        description: "Quince rosas rojas con margaritas y solidago en envoltura blanca ilustrada con lazo rojo. Abundante, romántico y perfecto para sorprender sin aviso.",
+        categories: ["rosas-rojas", "precio-bajo"],
+        promo: "amor"
+    },
+    {
+        id: 80,
+        name: "Pompones Rosados y Blancos",
+        price: 62500,
+        image: "/assets/foto80.webp",
+        description: "Ramo generoso de pompones rosados y blancos con statice lila y solidago en envoltura rosa. Frescura abundante para alegrar la casa o la oficina.",
+        categories: ["mix", "precio-bajo"],
+        promo: "amor"
+    },
+    {
+        id: 81,
+        name: "Rosas Rojas y Astromelias Blancas",
+        price: 81250,
+        image: "/assets/foto81.webp",
+        description: "Rosas rojas con astromelias blancas, statice morado y un chocolate de regalo en envoltura negra con lazo dorado. Contraste elegante que se roba las miradas.",
+        categories: ["rosas-rojas", "mix", "precio-bajo"],
+        promo: "amor"
+    },
+    {
+        id: 82,
+        name: "3 Girasoles en Envoltura Negra",
+        price: 45000,
+        image: "/assets/foto82.webp",
+        description: "Tres girasoles grandes con solidago y toques de statice en envoltura negra con lazo amarillo. El regalo amarillo más pedido, listo para entregar.",
+        categories: ["girasoles", "precio-bajo"],
+        promo: "amarillas"
+    },
+    {
+        id: 83,
+        name: "Girasoles y Rosas Rojas Premium",
+        price: 156250,
+        image: "/assets/foto83.webp",
+        description: "Composición amplia de girasoles con rosas rojas y solidago en envoltura lila y blanca. Alegría y pasión en una pieza de gran formato.",
+        categories: ["girasoles", "rosas-rojas", "precio-medio"],
+        promo: "amor"
+    },
+    {
+        id: 84,
+        name: "50 Rosas Rojas Deluxe",
+        price: 262500,
+        image: "/assets/foto84.webp",
+        description: "Cincuenta rosas rojas en envoltura negra con líneas doradas y lazo rojo de raso. La declaración definitiva para un momento irrepetible.",
+        categories: ["rosas-rojas", "precio-alto"],
+        promo: "amor"
+    },
+    {
+        id: 85,
+        name: "Rosas Pastel y Ferrero Rocher",
+        price: 145000,
+        image: "/assets/foto85.webp",
+        description: "Rosas rosadas, rojas y lila con chocolates Ferrero Rocher y solidago en envoltura negra con tul rosa. Dulzura y sofisticación en partes iguales.",
+        categories: ["rosas-rosadas", "chocolates", "precio-medio"],
+        promo: "amor"
+    },
+    {
+        id: 86,
+        name: "Hortensias Rosadas y Claveles",
+        price: 72500,
+        image: "/assets/foto86.webp",
+        description: "Hortensias rosadas de gran volumen con claveles blancos y pompones en envoltura translúcida. Una pieza voluminosa y romántica que impresiona por su tamaño.",
+        categories: ["mix", "precio-bajo"],
+        promo: "amor"
+    },
+    {
+        id: 87,
+        name: "Girasoles Campestres",
+        price: 55000,
+        image: "/assets/foto87.webp",
+        description: "Girasoles con margaritas blancas, solidago y statice morado en envoltura blanca con lazo lila. Frescura de campo para regalar buena energía.",
+        categories: ["girasoles", "precio-bajo"],
+        promo: "amarillas"
+    },
+    {
+        id: 88,
+        name: "Girasoles y Gerberas Azules",
+        price: 77500,
+        image: "/assets/foto88.webp",
+        description: "Girasoles combinados con gerberas azules en envoltura blanca con lazo celeste. Un contraste original inspirado en La Noche Estrellada.",
+        categories: ["girasoles", "mix", "precio-bajo"],
+        promo: "amarillas"
+    },
+    {
+        id: 89,
+        name: "7 Rosas Rojas Clásicas",
+        price: 68750,
+        image: "/assets/foto89.webp",
+        description: "Siete rosas rojas con follaje fresco en envoltura negra decorada con moños dorados y lazo rojo. El detalle justo para decir 'pensé en ti'.",
+        categories: ["rosas-rojas", "precio-bajo"],
+        promo: "amor"
     }
 ];
 
@@ -1741,5 +2115,100 @@
         // Render inicial
         renderProducts();
     </script>
+<!-- ===== PROMO SEPTIEMBRE 2026: contadores + grillas ===== -->
+    <script>
+    (function () {
+        function pad(n) { return String(n).padStart(2, '0'); }
+
+        function startCountdowns() {
+            var boxes = document.querySelectorAll('.promo-countdown[data-target]');
+            if (!boxes.length) return;
+            function tick() {
+                boxes.forEach(function (box) {
+                    var target = new Date(box.dataset.target).getTime();
+                    var diff = target - Date.now();
+                    if (isNaN(target)) return;
+                    if (diff <= 0) {
+                        if (!box.classList.contains('is-done')) {
+                            box.classList.add('is-done');
+                            box.innerHTML = '<span class="cd-done">' + (box.dataset.done || '\u00a1Ya lleg\u00f3 el d\u00eda!') + '</span>';
+                        }
+                        return;
+                    }
+                    var s = Math.floor(diff / 1000);
+                    var set = function (k, v) {
+                        var el = box.querySelector('[data-cd="' + k + '"]');
+                        if (el) el.textContent = v;
+                    };
+                    set('d', pad(Math.floor(s / 86400)));
+                    set('h', pad(Math.floor(s % 86400 / 3600)));
+                    set('m', pad(Math.floor(s % 3600 / 60)));
+                    set('s', pad(s % 60));
+                });
+            }
+            tick();
+            setInterval(tick, 1000);
+        }
+
+        function promoCard(p) {
+            var photo = (typeof productPhotoUrl === 'function')
+                ? productPhotoUrl(p)
+                : p.image;
+            var code = (typeof productCode === 'function')
+                ? productCode(p)
+                : String(p.id).padStart(3, '0');
+            var price = (typeof formatPrice === 'function')
+                ? formatPrice(p.price)
+                : '$' + p.price.toLocaleString('es-CO');
+            var msg = encodeURIComponent(
+                'Hola, me interesa el producto: ' + p.name + ' (Ref. ' + code + ') - ' + price + ' | Foto: ' + photo
+            );
+            return '' +
+              '<div class="product-card" data-categories="' + p.categories.join(' ') + '">' +
+                '<div class="product-image-container" onclick="openLightbox(\'' + p.image + '\', \'' + p.name.replace(/'/g, "\\'") + '\', \'' + price + '\')">' +
+                  '<img src="' + p.image + '" alt="' + p.name + '" class="product-image" loading="lazy">' +
+                  '<div class="zoom-icon">' +
+                    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +
+                      '<circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>' +
+                      '<line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>' +
+                    '</svg>' +
+                  '</div>' +
+                '</div>' +
+                '<div class="product-info">' +
+                  '<div class="product-ref">Ref. ' + code + '</div>' +
+                  '<h3 class="product-name">' + p.name + '</h3>' +
+                  '<div class="product-description">' + p.description + '</div>' +
+                  '<div class="product-footer">' +
+                    '<div><span class="price-label">Desde</span><div class="product-price">' + price + '</div></div>' +
+                    '<a href="https://wa.me/573125961045?text=' + msg + '" class="btn-order" target="_blank">' +
+                      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>' +
+                      'Pedir Ahora' +
+                    '</a>' +
+                  '</div>' +
+                '</div>' +
+              '</div>';
+        }
+
+        function renderPromoGrids() {
+            if (typeof products === 'undefined' || !Array.isArray(products)) return;
+            [['amarillas', 'promo-grid-amarillas'], ['amor', 'promo-grid-amor']].forEach(function (pair) {
+                var grid = document.getElementById(pair[1]);
+                if (!grid) return;
+                var list = products.filter(function (p) { return p.promo === pair[0]; });
+                var section = document.getElementById('promo-' + pair[0]);
+                if (!list.length) { if (section) section.style.display = 'none'; return; }
+                grid.innerHTML = list.map(promoCard).join('');
+            });
+        }
+
+        function init() { renderPromoGrids(); startCountdowns(); }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    })();
+    </script>
+
 </body>
 </html>
