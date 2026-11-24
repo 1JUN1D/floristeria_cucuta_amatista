@@ -775,6 +775,16 @@
       ]
     }
     </script>
+    <!-- CSS del catalogo (estilo replicado) -->
+    <link rel="stylesheet" href="../css/catalog.css">
+    <style>
+      /* Ajustes del catalogo embebido en la landing (sin navbar fijo) */
+      .catalog-filters { position: sticky; top: 0; }
+      .catalog-intro { background: var(--catalog-cream); padding: 70px 0 0; text-align: center; }
+      .catalog-intro .section-title,
+      .catalog-intro .section-subtitle { color: var(--catalog-ink); }
+      .catalog-intro .section-subtitle { color: var(--catalog-gray); max-width: 720px; margin: 0 auto; }
+    </style>
 </head>
 <body>
     <!-- Hero Section -->
@@ -800,12 +810,43 @@
             </a>
         </div>
     </section>
-    <!-- Cotización personalizada -->
-    <section class="products-section">
+    <!-- ====== CATALOGO FUNEBRE (segunda seccion) ====== -->
+    <section class="catalog-intro">
         <div class="container">
             <h2 class="section-title">Catálogo de Ramos Fúnebres y Coronas Fúnebres</h2>
-            <p class="section-subtitle">Elaboramos coronas fúnebres, ramos, corazones, pedestales y arreglos florales para velorios en Cúcuta, totalmente personalizados según tu necesidad y presupuesto. Escríbenos por WhatsApp, cuéntanos qué necesitas y te enviamos fotos de los modelos disponibles con cotización inmediata.</p>
-            <div style="text-align:center;margin-top:2rem">
+            <p class="section-subtitle">Coronas, corazones, lágrimas y arreglos de base para velorios en Cúcuta, con cinta personalizada y entrega en salas de velación, iglesias y cementerios. Busca por nombre o código y pide el tuyo por WhatsApp.</p>
+        </div>
+    </section>
+
+    <section class="catalog-filters">
+        <div class="container">
+            <div class="catalog-search">
+                <input type="search" id="product-search" placeholder="Buscar por nombre o código (ej. corona o 094)" aria-label="Buscar producto por nombre o código">
+            </div>
+            <div class="filters-container">
+                <span class="filter-label">Filtrar por:</span>
+                <button class="filter-btn active" data-filter="todos">Todos los Arreglos</button>
+                <button class="filter-btn" data-filter="precio-medio">$100.000 - $200.000</button>
+                <button class="filter-btn" data-filter="precio-alto">Más de $200.000</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="results-counter">
+        <div class="container">
+            Mostrando <strong id="results-count">11</strong> productos
+        </div>
+    </div>
+
+    <section class="catalog-section">
+        <div class="container">
+            <div class="products-grid" id="products-grid"></div>
+            <div class="empty-state" id="empty-state">
+                <h3>No se encontraron productos</h3>
+                <p>Prueba con otra búsqueda o escríbenos por WhatsApp y te enviamos más modelos</p>
+            </div>
+            <p class="section-subtitle" style="margin-top:3rem;margin-bottom:1.5rem">¿Necesitas otro tamaño, colores distintos o un arreglo totalmente personalizado? Escríbenos y te cotizamos de inmediato.</p>
+            <div style="text-align:center">
                 <a href="https://wa.me/573125961045?text=Hola,%20necesito%20cotizar%20un%20arreglo%20f%C3%BAnebre%20en%20C%C3%BAcuta" class="cta-hero" onclick="trackConversion()">💬 Cotizar por WhatsApp</a>
             </div>
         </div>
@@ -1031,6 +1072,250 @@
         function trackConversion() {
             try { gtag('event', 'conversion', { 'send_to': 'AW-17503274952/DbwQCIekjb4cEMiPm5pB' }); } catch(e) {}
         }
+    </script>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close">&times;</button>
+            <img src="" alt="" class="lightbox-image" id="lightbox-image">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-price"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scroll-top" aria-label="Volver arriba">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+
+    <!-- JavaScript del catalogo fúnebre -->
+    <script>
+        // ====== Datos de productos (arreglos fúnebres) ======
+        const products = [
+    {
+        id: 90,
+        name: "Un Adiós Lleno de Paz – Arreglo Blanco de Rosas, Lirios y Crisantemos",
+        price: 137500,
+        image: "/assets/funebre_1.webp",
+        description: "Blanco puro que habla de calma y respeto. Rosas blancas, lirios, crisantemos y margaritas con follaje de palma y eucalipto sobre base de madera. Para acompañar a la familia en la sala de velación con un mensaje sereno.",
+        categories: ["funebres", "precio-medio"]
+    },
+    {
+        id: 91,
+        name: "Luz Para Despedir – Arreglo de Hortensias, Rosas Fucsia y Girasoles",
+        price: 150000,
+        image: "/assets/funebre_2.webp",
+        description: "Un homenaje con color que recuerda una vida alegre. Hortensias blancas, rosas fucsia, girasoles y margaritas en abanico de palmas sobre base, con tarjeta de condolencia. Para despedir a alguien que llenaba de luz cada lugar.",
+        categories: ["funebres", "precio-medio"]
+    },
+    {
+        id: 92,
+        name: "Media Luna de Consuelo – Corona en Pedestal con Rosas y Hortensias",
+        price: 275000,
+        image: "/assets/funebre_3.webp",
+        description: "Se ve imponente en la sala y transmite consuelo. Media luna de margaritas blancas con cascada de rosas blancas e hortensias, ramillete inferior y cinta personalizada con el nombre o mensaje que elijas. Entrega en pedestal lista para la velación.",
+        categories: ["funebres", "precio-alto"]
+    },
+    {
+        id: 93,
+        name: "Corazón Eterno – Corazón Fúnebre de Pompones Blancos con Rosas Rojas",
+        price: 300000,
+        image: "/assets/funebre_4.webp",
+        description: "El amor que se queda aunque la persona se vaya. Corazón de pompones blancos con borde de hojas, ramillete de rosas rojas y lirios, ramo inferior y tarjeta de condolencia, todo sobre pedestal. Para la familia o la pareja que quiere decir te quiero por última vez.",
+        categories: ["funebres", "precio-alto"]
+    },
+    {
+        id: 94,
+        name: "Descansa en Paz – Corona Circular de Rosas Crema y Lirios",
+        price: 262500,
+        image: "/assets/funebre_5.webp",
+        description: "La corona clásica que nunca está de más. Corona redonda de rosas crema, lirios blancos y margaritas con follaje verde y cinta personalizada en pedestal. Para expresar condolencias con elegancia y respeto.",
+        categories: ["funebres", "precio-alto"]
+    },
+    {
+        id: 95,
+        name: "Homenaje Sereno – Lágrima Fúnebre de Rosas Blancas",
+        price: 275000,
+        image: "/assets/funebre_6.webp",
+        description: "Abundante, sobria y llena de paz. Lágrima de rosas blancas con gypsophila y follaje verde en pedestal, con cinta personalizada. Para empresas, amigos o familiares que quieren un homenaje distinguido.",
+        categories: ["funebres", "precio-alto"]
+    },
+    {
+        id: 96,
+        name: "Respeto y Gratitud – Corona de Crisantemos con Rosas Blancas",
+        price: 281250,
+        image: "/assets/funebre_7.webp",
+        description: "Formal y delicada a la vez. Media luna de crisantemos blancos con cascada de rosas blancas, ramillete inferior y cinta personalizada en pedestal. Ideal para condolencias de empresas, entidades y compañeros de trabajo.",
+        categories: ["funebres", "precio-alto"]
+    },
+    {
+        id: 97,
+        name: "Un Recuerdo que Brilla – Corona con Girasoles y Rosas Amarillas",
+        price: 262500,
+        image: "/assets/funebre_8.webp",
+        description: "Para recordar a alguien con la alegría que dejó. Media luna de margaritas blancas con girasoles, rosas amarillas y gerbera, cinta personalizada y tarjeta en pedestal. Un homenaje luminoso que se distingue en la sala.",
+        categories: ["funebres", "precio-alto"]
+    },
+    {
+        id: 98,
+        name: "Una Luz que Acompaña – Arreglo de Rosas Crema con Vela",
+        price: 225000,
+        image: "/assets/funebre_9.webp",
+        description: "La vela encendida simboliza la luz que permanece. Rosas crema en cascada con gladiolos, gypsophila, vela y tarjeta de condolencia sobre base tipo mármol. Para acompañar a la familia en la velación o la misa.",
+        categories: ["funebres", "precio-alto"]
+    },
+    {
+        id: 99,
+        name: "Amor que Permanece – Corona Doble de Rosas Rosadas",
+        price: 343750,
+        image: "/assets/funebre_10.webp",
+        description: "Una corona que se ve delicada y majestuosa. Doble aro de pompones blancos y rosas rosadas con ramillete de lirios, hortensias y rosas en pedestal. Para despedir a una madre, abuela o amiga muy querida.",
+        categories: ["funebres", "precio-alto"]
+    },
+    {
+        id: 100,
+        name: "Celebrando una Vida – Corona con Rosas Rojas, Lirios y Claveles",
+        price: 275000,
+        image: "/assets/funebre_11.webp",
+        description: "Color y cariño para honrar una vida plena. Media luna de margaritas blancas con rosas rojas y blancas, lirios rosados, claveles y cinta personalizada en pedestal. Para una despedida cálida y llena de amor.",
+        categories: ["funebres", "precio-alto"]
+    }
+];
+
+        // Etiquetas legibles de categoria
+        const categoryLabels = {
+            'girasoles': 'Girasoles',
+            'rosas-rojas': 'Rosas Rojas',
+            'rosas-rosadas': 'Rosas Rosadas',
+            'tulipanes': 'Tulipanes',
+            'chocolates': 'Flores y Chocolates',
+            'cajas': 'Cajas y Cofres',
+            'mix': 'Ramos Mix',
+            'funebres': 'Fúnebres'
+        };
+
+        let currentFilter = 'todos';
+        let searchTerm = '';
+
+        function productCode(p) { return String(p.id).padStart(3, '0'); }
+        function productPhotoUrl(p) { return 'http://floristeriaamatista.dondeseria.com/' + p.image.replace(/^\//, ''); }
+        function normalizeText(t) { return t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+        function formatPrice(price) { return '$' + price.toLocaleString('es-CO'); }
+
+        function renderProducts() {
+            const grid = document.getElementById('products-grid');
+            const emptyState = document.getElementById('empty-state');
+            const resultsCount = document.getElementById('results-count');
+
+            let filtered = products;
+            if (currentFilter !== 'todos') {
+                filtered = filtered.filter(p => p.categories.includes(currentFilter));
+            }
+            if (searchTerm.trim()) {
+                const q = normalizeText(searchTerm.trim());
+                filtered = filtered.filter(p =>
+                    normalizeText(p.name).includes(q) || normalizeText(p.description).includes(q) || productCode(p).includes(q)
+                );
+            }
+
+            if (filtered.length === 0) {
+                grid.style.display = 'none';
+                emptyState.classList.add('active');
+                resultsCount.textContent = '0';
+                return;
+            }
+
+            grid.style.display = 'grid';
+            emptyState.classList.remove('active');
+            resultsCount.textContent = filtered.length;
+
+            grid.innerHTML = filtered.map(p => {
+                const code = productCode(p);
+                const catTags = p.categories
+                    .filter(c => categoryLabels[c])
+                    .map(c => `<span class="product-tag product-tag-cat">${categoryLabels[c]}</span>`)
+                    .join('');
+                const waText = encodeURIComponent('Hola, me interesa el producto: ' + p.name + ' (Cod. ' + code + ') - ' + formatPrice(p.price) + ' | Foto: ' + productPhotoUrl(p));
+                const safeName = p.name.replace(/'/g, "\\'");
+                return `
+                <div class="product-card" data-categories="${p.categories.join(' ')}">
+                    <div class="product-image-container" onclick="openLightbox('${p.image}', '${safeName}', '${formatPrice(p.price)}')">
+                        <img src="${p.image}" alt="${p.name} - arreglo floral a domicilio en Cúcuta | Floristería Amatista" class="product-image" loading="lazy">
+                        <div class="zoom-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                                <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">${p.name}</h3>
+                        <div class="product-description">${p.description}</div>
+                        <div class="product-footer">
+                            <div>
+                                <span class="price-label">Desde</span>
+                                <div class="product-price">${formatPrice(p.price)}</div>
+                            </div>
+                            <a href="https://wa.me/573125961045?text=${waText}" class="btn-order" target="_blank" rel="noopener" onclick="trackConversion()">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                Pedir Ahora
+                            </a>
+                        </div>
+                        <div class="product-tags">
+                            <span class="product-tag product-tag-code">Cod. ${code}</span>
+                            ${catTags}
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentFilter = this.dataset.filter;
+                renderProducts();
+            });
+        });
+
+        document.getElementById('product-search').addEventListener('input', function() {
+            searchTerm = this.value;
+            renderProducts();
+        });
+
+        // Lightbox
+        function openLightbox(image, name, price) {
+            document.getElementById('lightbox-image').src = image;
+            document.getElementById('lightbox-image').alt = name;
+            document.getElementById('lightbox-title').textContent = name;
+            document.getElementById('lightbox-price').textContent = price;
+            document.getElementById('lightbox').classList.add('active');
+        }
+        function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); }
+        document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) closeLightbox();
+        });
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+
+        // Scroll to top
+        const scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 600) scrollTopBtn.classList.add('visible');
+            else scrollTopBtn.classList.remove('visible');
+        });
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Render inicial
+        renderProducts();
     </script>
 </body>
 </html>
